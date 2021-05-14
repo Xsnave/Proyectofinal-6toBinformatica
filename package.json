@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Xsnave/Proyectofinal-6toBinformatica/issues"
   },
-  "homepage": "https://github.com/Xsnave/Proyectofinal-6toBinformatica#readme"
+  "homepage": "https://github.com/Xsnave/Proyectofinal-6toBinformatica#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
