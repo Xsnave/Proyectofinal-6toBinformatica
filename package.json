@@ -1,0 +1,19 @@
+{
+  "name": "proyectofinal-6tobinformatica",
+  "version": "1.0.0",
+  "description": "Proyecto final",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xsnave/Proyectofinal-6toBinformatica.git"
+  },
+  "author": "Evans Fernando Jimenez <evansjimenez22@gmail.com> (www.github.com/Xsnave)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xsnave/Proyectofinal-6toBinformatica/issues"
+  },
+  "homepage": "https://github.com/Xsnave/Proyectofinal-6toBinformatica#readme"
+}
