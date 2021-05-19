@@ -58,3 +58,16 @@ Realizar video explicando el proyecto.
     Que el formulario se envíe a un correo (abrir correo)
     Audios y videos
     Medias query
+
+### Rutas
+
+| Endpoint | HTTP| Description|
+| --- | --- | --- |
+|'/'| GET | Pagina de inicio |
+|'/Servicios'| GET | Pagina de Servicios |
+|'/Nosotros'| GET | Pagina de Nosotros |
+|'/Contacto'| GET | Pagina de Contacto |
+|'/404'| GET | Pagina de error |
+
+## License
+MIT (c) Evans Fernando Jimenez
