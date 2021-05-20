@@ -1,0 +1,349 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Header */
+#Logo{
+    width: 20%;
+    max-height: 100%;
+    height: 59px;
+    padding: 6.5px 0 4px 50px;
+    float: left;
+}
+#Nav{
+    float: right;
+}
+.Clear{
+    clear: both;
+}
+header{
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 10000;
+    box-shadow: 0px 0px 10px 0px;
+    margin-top: 0;
+}
+#Header ul {
+    list-style: none;
+    background: #262626;
+    text-align: center;
+    padding:0;
+    margin: 0;
+}
+#Header ul li{
+    display: inline-block;
+}
+#Header ul li a{
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    display: block;
+    padding: 26px 45px;
+    font-size: 18px;
+    font-family: bignoddletitling;
+}
+#Header ul li a:hover{
+    background-color: #3434a5;
+    color: #fff;
+    transition: 0.3s;
+}
+.dropbtn {
+    background-color: #262626;
+    color: #fff;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+} 
+.dropdown {
+    position: relative;
+    display: inline-block;
+} 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+} 
+.dropdown-content a {
+    color: #262626;
+    padding: 26px 52px;
+    text-decoration: none;
+    display: block; 
+}
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+.dropdown-content2 a {
+    color: #262626;
+    padding: 26px 70.3px;
+    text-decoration: none;
+    display: block; 
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content2 a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content2 {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3434a5;}
+
+#Banner{
+    padding-top: 68px;
+    width: 99.9%;
+    height: 630px;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    opacity: 0.9;
+}
+.Texto{
+    position: absolute;
+    top: 270px;
+    right: 32.5%;
+    left: 30%;
+    font-size: 100px;
+    font-family: bignoddletitling;
+}
+.Texto span {
+    color: red;
+}
+.Texto2{
+    position: absolute;
+    top: 380px;
+    right: 32.5%;
+    left: 35.5%;
+    color: #fff;
+    font-size: 40px;
+    font-family: bignoddletitling;
+}
+h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: bignoddletitling;
+    text-decoration: none;
+}
+
+/* Main div */
+#Main{
+    padding-top: 100px;
+    background-color: #fff;
+}
+#Servicios img{
+    border: 20px double #262626 ;
+    
+}
+#Main .right p{
+    margin-left: 23px;
+}
+#Servicios .left img{
+    width: 250px;
+    height: 250px;
+}
+#Servicios .right img{
+    margin-left: 17px;
+    width: 250px;
+    height: 250px;
+}
+#Servicios p{
+    text-align: center;
+    font-size: 18px;
+}
+#Servicios {
+    padding-bottom: 75px;
+}
+.left{
+    padding-top: 70px;
+    float: left;
+    margin-left: 20%;
+}
+.right{
+    padding-top: 70px;
+    margin-right: 18%;
+    float: right;
+}
+.left .btn{
+    margin-top: 20px;
+    margin-left: 25%;
+}
+.right .btn{
+    margin-top: 20px;
+    margin-left: 37%;
+}
+button{
+    background-color: #262626;
+    padding: 7%;
+    color: #fff;
+    font-size: 15px;
+}
+button:hover{
+    background-color: rgb(214, 214, 214);
+    color: #262626;
+    transition: 0.3s;
+}
+
+/* Nosotros*/
+#Nosotros{
+    padding: 30px 0px 75px 0px;
+    background-color: #262626;
+    opacity: 0.9.9;
+}
+
+.NLeft{
+    float:left;
+}
+
+#Nosotros p{
+    margin-left: 30px;
+    text-align: justify;
+    color: #fff;
+    margin-right: 60%;
+    font-size: 18px;
+    font-family: 'Arial';
+}
+
+#Nosotros h2, #Nosotros h3 {
+    text-decoration: none;
+    padding-left: 70px;
+    padding-bottom: 6px;
+    text-align: left;
+    color: #fff;
+    font-family: 'Tisa';
+}
+
+#Nosotros h3, #Nosotros h2 {
+    padding-top: 40px;
+}
+
+#Nosotros ul{
+    padding-left: 60px;
+    color: #fff;
+}
+
+#Nosotros ul li{
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#Nosotros img{
+    width: 40%;
+    height: 420px;
+    float: right;
+    padding-right: 50px;
+    
+}
+
+/* Contacto */
+#Contacto{
+padding-top: 70px;
+padding-bottom: 30px;
+}
+#Contacto-container{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+#Direccion-container{
+margin-left: 2%;
+float: left;
+padding-right: 15%;
+}
+#Contacto img{
+    padding-top: 10px;
+    max-width: 90%;
+    height: 225px;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+#Direccion-container h3 {
+    padding-top: 20px;
+}
+
+.ConT{
+    padding:10px 5px;
+    font-size: 20px;
+}
+
+form label {
+    color: #fff;
+}
+
+#Form-container {
+    border-radius: 5px;
+    background-image: linear-gradient(to right bottom, #000099 30%,
+    #2952a3 60%, #0f1f3d 10%);
+    padding: 20px;
+    float: right;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20px;
+    box-shadow: 5px 2px 10px 2px;
+    opacity: 0.9;
+}
+
+#Form-container h2 {
+      text-decoration: none;
+      color: #fff;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    background-color: transparent;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 6px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 5px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+#Sub{
+      margin-left: 40%;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #262626;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+/* Add a background color and some padding around the form */
+
+#Footer{
+    background-color: #262626;
+    width: 99.9%;
+    height: 152px;
+}
+
+.Footer-Texto{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.Footer-Texto span {
+    color: red;
+}

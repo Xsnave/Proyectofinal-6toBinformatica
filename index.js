@@ -4,16 +4,22 @@ const path = require('path');
 
 const app= express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
+// Settings
+app.set("view engine", ".hbs");
 app.set('views',path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.engine('.hbs', hbs({
+// Handlebars config
+app.engine(
+    '.hbs', 
+    hbs({
     defaultLayout: "main",
-    layoutDir: path.join(app.use('views'), 'layout'),
-    partialsDir: path.join(app.use('views'), 'partials'),
+    layoutDir: path.join(app.get('views'), 'layout'),
+    partialsDir: path.join(app.get('views'), 'partials'),
     extname: ".hbs"
-})
+        })
 );
 
 app.get('/', (req, res)=>{

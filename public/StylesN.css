@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Header */
+#Logo{
+    width: 20%;
+    max-height: 100%;
+    height: 59px;
+    padding: 6.5px 0 4px 50px;
+    float: left;
+}
+#Nav{
+    float: right;
+}
+.Clear{
+    clear: both;
+}
+header{
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 10000;
+    box-shadow: 0px 0px 10px 0px;
+    margin-top: 0;
+}
+#Header ul {
+    list-style: none;
+    background: #262626;
+    text-align: center;
+    padding:0;
+    margin: 0;
+}
+#Header ul li{
+    display: inline-block;
+}
+#Header ul li a{
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    display: block;
+    padding: 26px 45px;
+    font-size: 18px;
+    font-family: bignoddletitling;
+}
+#Header ul li a:hover{
+    background-color: #3434a5;
+    color: #fff;
+    transition: 0.3s;
+}
+.dropbtn {
+    background-color: #262626;
+    color: #fff;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+} 
+.dropdown {
+    position: relative;
+    display: inline-block;
+} 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+} 
+.dropdown-content a {
+    color: #262626;
+    padding: 26px 52px;
+    text-decoration: none;
+    display: block; 
+}
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+.dropdown-content2 a {
+    color: #262626;
+    padding: 26px 70.3px;
+    text-decoration: none;
+    display: block; 
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content2 a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content2 {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3434a5;}
+
+/* Nosotros*/
+#Nosotros{
+    padding-top: 100px;
+    background-color: #262626;
+}
+#Nosotros p{
+    margin-left: 30px;
+    text-align: justify;
+    color: #fff;
+    margin-right: 60%;
+    font-size: 18px;
+    font-family: 'Arial';
+}
+
+#Nosotros h2, #Nosotros h3 {
+    text-decoration: none;
+    padding-left: 70px;
+    padding-bottom: 6px;
+    text-align: left;
+    color: #fff;
+    font-family: 'Tisa';
+}
+
+#Nosotros h3, #Nosotros h2 {
+    padding-top: 40px;
+}
+
+#Nosotros ul{
+    padding-left: 60px;
+    color: #fff;
+}
+
+#Nosotros ul li{
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 0;
+}
+#Slide {
+    float: right;
+}
+
+.mySlides{
+    display: none;
+    width: 40%;
+    height: 420px;
+}
+
+.mySlides img{
+    margin-left: 50px;
+    height: 420px;
+}
+
+.slideshow-container {
+    padding: 20px 20px;
+    margin: auto;
+  }
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+
+#Footer{
+    margin-top: 10px;
+    background-color: #262626;
+    width: 99.9%;
+    height: 152px;
+}
+
+.Footer-Texto{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.Footer-Texto span {
+    color: red;
+}
