@@ -26,19 +26,19 @@ transporter.verify().then(() => {
 // Settings
 app.set("view engine", ".hbs");
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({
-    extended: false
-}));
 
 // Handlebars config
 app.engine('.hbs', hbs({
     defaultLayout: "main",
     layoutsDir: path.join(app.get('views'), 'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
-    extname: ".hbs"
+    extname: ".hbs",
 })
 );
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({
+    extended: false
+}));
 
 app.get('/', (req, res) => {
     res.render("home");
