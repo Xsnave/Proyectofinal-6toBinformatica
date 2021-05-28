@@ -1,9 +1,8 @@
-const { request } = require('express');
+
 const express = require('express');
 const hbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
-const { env } = require('process');
 require('dotenv').config();
 
 const app = express();
