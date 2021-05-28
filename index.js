@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
     secure: true, // true for 465, false for other ports
     auth: {
         user: process.env.MAIL_USER, // generated ethereal user
-        pass: process.env.MAIL_PASS, // generated ethereal password
+        pass: process.env.MAIL_PASS // generated ethereal password
     },
 });
 
