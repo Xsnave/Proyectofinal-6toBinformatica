@@ -1,47 +1,86 @@
+const { request } = require('express');
 const express = require('express');
 const hbs = require('express-handlebars');
 const path = require('path');
+const nodemailer = require('nodemailer');
+const { env } = require('process');
+require('dotenv').config();
 
-const app= express();
+const app = express();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
+// Config Mail
+const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    auth: {
+        user: process.env.MAIL_USER, // generated ethereal user
+        pass: process.env.MAIL_PASS, // generated ethereal password
+    },
+});
+
+transporter.verify().then(() => {
+    console.log("Listo para enviar los correos!");
+})
 
 // Settings
 app.set("view engine", ".hbs");
-app.set('views',path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({
+    extended: false
+}));
 
 // Handlebars config
-app.engine(
-    '.hbs', 
-    hbs({
+app.engine('.hbs', hbs({
     defaultLayout: "main",
-    layoutDir: path.join(app.get('views'), 'layout'),
+    layoutDir: path.join(app.get('views'), 'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
     extname: ".hbs"
-        })
+})
 );
 
-app.get('/', (req, res)=>{
-    res.send('Pagina de inicio')
+app.get('/', (req, res) => {
+    res.render("home");
 });
 
-app.get('/Servicios', (req, res)=>{
-    res.send('Pagina de Servicio')
+app.get('/Servicios', (req, res) => {
+    res.render('servicios');
 });
 
-app.get('/Nosotros', (req, res)=>{
-    res.send('Pagina de Nosotros')
+app.get('/Productos', (req, res) => {
+    res.render('productos');
 });
 
-app.get('/Contacto', (req, res)=>{
-    res.send('Pagina de contacto')
+app.get('/Nosotros', (req, res) => {
+    res.render('nosotros');
 });
 
-app.use((req, res)=>{
-    res.send('404')
+app.get('/Contacto', (req, res) => {
+    res.render('contacto');
 });
 
-app.listen(PORT, ()=>{
+app.post('/Contacto', async(req, res) => {
+    // send mail with defined transport object
+    await transporter.sendMail({
+        from: process.env.MAIL_USER, // sender address
+        to: process.env.MAIL_USER, // list of receivers
+        subject: `${req.body.nombre} requiere de su atencion acerca de ${req.body.asunto}`, // Subject line
+        html: `<h1>Nombre: ${req.body.nombre}</h1>
+        <h1>E-mail: ${req.body.email}</h1>
+        <h1>Telefono: ${req.body.number}</h1>
+        <h1>Solicita la siguiente informacion:</h1>
+        <h1>${req.body.mensaje}</h1>`, // html body
+    });
+
+    res.redirect('/');
+})
+
+app.use((req, res) => {
+    res.render('404');
+});
+
+app.listen(PORT, () => {
     console.log(`Server at http://localhost:${PORT}`);
 });

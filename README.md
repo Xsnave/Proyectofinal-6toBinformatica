@@ -65,6 +65,7 @@ Realizar video explicando el proyecto.
 | --- | --- | --- |
 |'/'| GET | Pagina de inicio |
 |'/Servicios'| GET | Pagina de Servicios |
+|'/Productos'| GET | Pagina de Productos |
 |'/Nosotros'| GET | Pagina de Nosotros |
 |'/Contacto'| GET | Pagina de Contacto |
 |'/404'| GET | Pagina de error |
